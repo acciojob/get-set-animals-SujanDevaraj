@@ -1,9 +1,38 @@
 //complete this code
-class Animal {}
+class Animal {
+	constructor(species){
+	this._species = species;	
+	}
+	  get species() {
+    return this._species;
+  }
 
-class Dog extends Animal {}
+  makeSound() {
+    console.log("Some generic animal sound");
+  }
+}
 
-class Cat extends Animal {}
+class Dog extends Animal {
+	 bark() {
+    console.log("woof");
+  }
+
+  // Overriding the makeSound method for Dog
+  makeSound() {
+    console.log("Woof woof");
+  }
+}
+
+class Cat extends Animal {
+	 purr() {
+    console.log("purr");
+  }
+
+  // Overriding the makeSound method for Cat
+  makeSound() {
+    console.log("Meow");
+  }
+}
 
 // Do not change the code below this line
 window.Animal = Animal;
